@@ -1,10 +1,15 @@
 import Mock from 'mockjs'
 
 import {
-  getUserInfo
+  login, getUserInfo
 } from './response/user'
 
-Mock.mock(/\/user\/login/, 'post', getUserInfo)
+import { getNav } from "./response/nav";
+
+Mock.mock(/\/user\/login/, 'post', login)
+Mock.mock(/\/user\/info/, 'get', getUserInfo)
+//----------------
+Mock.mock(/\/sys\/nav/, 'get', getNav)
 
 Mock.setup({
   

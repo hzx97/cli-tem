@@ -1,21 +1,32 @@
 <template>
     <div>
+      <h1>头部</h1>
       <h1>layout</h1>
-      <h1>{{appNameWithVersion}}22</h1>
+      <nav>
+        <ul>
+          <router-link to="/studio" tag="li"> studio</router-link>
+          <router-link to="/map" tag="li"> map</router-link>
+          <router-link to="/mining" tag="li"> mining</router-link>
+          <router-link to="/more" tag="li"> more</router-link>
+          
+        </ul>
+      </nav>
+      <router-view></router-view>
     </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+
 export default {
   name:'Layout',
-  computed:{
-    ...mapGetters(['appNameWithVersion'])
-  }
+  
 
 }
 </script>
 
 <style>
+.router-link-active {
+  color: red;
+}
 
 </style>

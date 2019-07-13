@@ -1,7 +1,6 @@
 const getters = {
-  //
-  appNameWithVersion: state => {
-    return state.appName + 'v2'
-  }
+  rules:state=>state.nav.rules,
+  routes: state => state.nav.routes,
+
 }
 export default getters

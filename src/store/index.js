@@ -7,6 +7,7 @@ import actions from './actions'
 import getters from './getters'
 
 import user from './module/user'
+import nav from './module/nav'
 
 import saveInLocal from './plugin/saveInLocal'
 
@@ -18,9 +19,10 @@ export default new Vuex.Store({
   actions,
   getters,
   modules:{
-    user
+   user,
+    nav
   },
-  plugins:[saveInLocal]
+  //plugins:[saveInLocal]
   
 
 })
