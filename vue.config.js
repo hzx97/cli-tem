@@ -4,6 +4,7 @@ const resolve = dir => path.join(__dirname, dir)
 
 const BASE_URL = process.env.NODE_ENV === 'production' ? '/' : '/'
 
+const port = 9527 // dev port
 module.exports = {
   lintOnSave: false,
   publicPath: BASE_URL,
@@ -16,6 +17,7 @@ module.exports = {
   productionSourceMap: false,
   //跨域
   devServer: {
-    proxy: 'http://localhost:4000'
+    port:port,
+ 
   }
 }

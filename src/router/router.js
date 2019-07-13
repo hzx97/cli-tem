@@ -5,6 +5,9 @@ export const routeMap  = [
     path: '/',
     name: 'Layout',
     component: Layout
+  },{
+    path:'/login',
+    component:()=>import('@/views/Login.vue')
   }
 ]
 

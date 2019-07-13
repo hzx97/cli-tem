@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 
-import config from './config'
+if (process.env.NODE_ENV !== 'production') require('./mock')
 
 Vue.config.productionTip = false
 
