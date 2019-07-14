@@ -7,6 +7,8 @@ import {
   setToken
 } from '../../lib/auth';
 
+import { resetRouter } from "../../router/index";
+
 const state = {
   token: '',
   roles: [],
@@ -98,6 +100,20 @@ const actions = {
       commit('SET_ROLES',[])
       removeToken()
       resolve()
+    })
+  },
+
+  /**
+   * @todo 退出登录
+   */
+  logout({commit}){
+    return new Promise((resolve,reject)=>{
+      commit('SET_TOKEN','')
+      commit('SET_ROLES', [])
+      removeToken()
+      resetRouter()
+      resolve()
+
     })
   }
 

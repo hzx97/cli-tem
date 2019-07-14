@@ -7,7 +7,7 @@ export const getNav = (options) => {
     studio:true,
     map:false,
     mining:true,
-    more:false,
+    more:true,
     errer_404:true
 
   }

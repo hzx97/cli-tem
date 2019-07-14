@@ -12,7 +12,7 @@ import {
 const whiteList = ['/login']
 
 router.beforeEach(async (to, from, next) => {
-  console.log(to)
+  // console.log(to)
   const hasToken = getToken()
   if (hasToken) {
     //有token
@@ -36,10 +36,10 @@ router.beforeEach(async (to, from, next) => {
           //去获取菜单
           const getNav = await store.dispatch('nav/getNav')
           const rules = JSON.parse(JSON.stringify(getNav))
-          console.log(rules)
+          // console.log(rules)
           const navList = await store.dispatch('nav/concatRoutes',
             rules)
-          console.log(navList, 'nav')
+          // console.log(navList, 'nav')
           router.addRoutes(navList)
           next({
             ...to,
