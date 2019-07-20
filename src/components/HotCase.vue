@@ -196,12 +196,14 @@ export default {
   //------卡片动画
   .fade-card-enter-active,
   .fade-card-leave-active {
-    transition: all 0.7s cubic-bezier(1, 0.5, 0.8, 1);
+    opacity: .3;
+    transition: all 0.7s cubic-bezier(1, 0.5, 0.8, 1) ;
   }
   .fade-card-enter,
   .fade-card-leave-to {
     transform: scale(.9);
     opacity: 0;
+    transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1) ;
   }
   //------mid
   .fade-card-mid-enter-active,
