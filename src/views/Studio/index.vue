@@ -3,14 +3,17 @@
     <div class="hotCaseInner">
       <hot-case></hot-case>
     </div>
+    <data-table></data-table>
   </div>
 </template>
 
 <script>
 import HotCase from '_c/HotCase'
+import DataTable from '_c/DataTable'
 export default {
   components:{
-    HotCase
+    HotCase,
+    DataTable
   }
 }
 </script>
