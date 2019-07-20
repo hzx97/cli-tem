@@ -228,7 +228,7 @@ export default {
   .fade-card-left-enter-active,
   .fade-card-left-leave-active {
     opacity: 0.5;
-    animation: fla 0.5s cubic-bezier(1, 0.5, 0.8, 1) 0.8s;
+    animation: fla 0.4s cubic-bezier(1, 0.5, 0.8, 1) 0.5s;
   }
   .fade-card-left-enter,
   .fade-card-left-leave-to {
