@@ -1,8 +1,14 @@
+'use strict'
+
 const path = require('path')
 
 const resolve = dir => path.join(__dirname, dir)
 
 const BASE_URL = process.env.NODE_ENV === 'production' ? '/' : '/'
+
+
+const webpack = require('webpack')
+
 
 const port = 9527 // dev port
 module.exports = {
@@ -19,5 +25,15 @@ module.exports = {
   devServer: {
     port:port,
  
-  }
+  },
+
+  configureWebpack: {
+    plugins: [
+     new webpack.ProvidePlugin({
+       $:"jquery",
+       jQuery:"jquery",
+       "windows.jQuery":"jquery"
+     })
+   ]
+ }
 }

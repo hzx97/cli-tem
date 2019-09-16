@@ -1,0 +1,169 @@
+#header {
+  width: 100%;
+  height: 40px;
+  background: #eee;
+  align-items: center;
+  box-sizing: border-box;
+
+  .header-box {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    width: 2px;
+    height: 25px;
+    background: #333;
+    margin: 0 15px;
+  }
+  span {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.right {
+  display: flex;
+
+  .search {
+    position: relative;
+    
+    top: 0px;
+    margin-right: 1px;
+    i {
+      font-size: 16px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    input {
+      width: 250px;
+      height: 40px;
+      background: #fff;
+      border: none;
+      border-radius: 1px;
+      text-indent: 27px;
+      // font-family: HiraginoSansGB-W3;
+      font-size: 13px;
+      color: #666666;
+      letter-spacing: 0;
+      text-align: left;
+      outline: none;
+    }
+  }
+}
+
+.right .topicList {
+  padding: 0 15px;
+  border: 1px solid @themeColor;
+  position: relative;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.right .topicList h3 {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.right .topicList h3 i {
+  font-size: 14px;
+  color: @themeColor;
+}
+
+.right .topicList h3 a {
+  color: @themeColor;
+}
+
+.right .topicList:hover .ul {
+  transform: scaleY(1);
+}
+
+.right .topicList .ul {
+  position: absolute;
+  top: 44px;
+  left: -10px;
+  background: #fff;
+  z-index: 40;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: 0.2s ease-in-out 0.3s;
+}
+
+.right .topicList .ul li a {
+  display: inline-block;
+  width: 140px;
+  height: 60px;
+  line-height: 60px;
+  left: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.right .topicList .ul li a:hover {
+  background: @themeColor;
+  color: #fff;
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    height: 40px;
+    background: #fff;
+    a {
+      color: @themeColor;
+    }
+  }
+  .register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    height: 40px;
+    background: #1893ef;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  height: 40px;
+  margin-left: 1px;
+  span {
+    color: #777;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-bottom: 2px;
+    border-bottom:2px solid #777;
+    font-size: 14px;
+  }
+}
