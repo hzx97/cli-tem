@@ -8,13 +8,20 @@ import './styles.scss'
 Vue.use(ElementUI)
 
 
-//引入自定义css
-import './assets/css/index.scss';
 //icon
 import './assets/iconfont/iconfont.css';
 
 //rem插件
 import './utils/flexible'
+
+import iView from 'cview-huangsir';
+import 'cview-huangsir/dist/styles/iview.css'; 
+
+
+//引入自定义css
+import './assets/css/index.scss';
+
+Vue.use(iView);
 
 
 // if (process.env.NODE_ENV !== 'production') require('./mock')
